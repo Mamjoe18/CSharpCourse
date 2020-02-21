@@ -36,3 +36,4 @@ C:\Users\userinsta\Desktop\Projects\Insta_WF_Ecommerce\obj\Debug\Insta_WF_Ecomme
 C:\Users\userinsta\Desktop\Projects\Insta_WF_Ecommerce\obj\Debug\Insta_WF_Ecommerce.csproj.GenerateResource.cache
 C:\Users\userinsta\Desktop\Projects\Insta_WF_Ecommerce\obj\Debug\Insta_WF_Ecommerce.exe
 C:\Users\userinsta\Desktop\Projects\Insta_WF_Ecommerce\obj\Debug\Insta_WF_Ecommerce.pdb
+C:\Users\userinsta\Desktop\Projects\Insta_WF_Ecommerce\obj\Debug\Insta_WF_Ecommerce.UpdateSupplierForm.resources

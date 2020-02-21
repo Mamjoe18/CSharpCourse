@@ -85,8 +85,6 @@ namespace Insta_WF_Ecommerce
                     cBSupplier.DataSource = dt;
                     cBSupplier.ValueMember = "IdBrand";
                     cBSupplier.DisplayMember = "Name";
-
-
                 }
 
             }

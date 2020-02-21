@@ -53,31 +53,6 @@ namespace Insta_WF_Ecommerce
 
         }
 
-        private void ListConsForm_Load()
-        {
-
-            using (var connection = new SqlConnection(cnx.ConnectionString))
-            {
-                string queryString = getConsumerData();
-
-                var command = new SqlCommand(queryString, connection);
-                connection.Open();
-
-                var reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dGVConsumer.Visible = true;
-                    DataTable dt = new DataTable();
-                    dt.Load(reader);
-
-                    dGVConsumer.DataSource = dt;
-                }
-            }
-
-
-        }
-
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String idSupplier = dGVConsumer.CurrentRow.Cells[0].Value.ToString();
@@ -110,18 +85,19 @@ namespace Insta_WF_Ecommerce
             String idCons = dGVConsumer.CurrentRow.Cells[0].Value.ToString();
             int id = int.Parse(idCons);
 
-            using (var connection = new SqlConnection(cnx.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(cnx.ConnectionString))
             {
                 String queryString = deleteConsumerData(id);
                 var command = new SqlCommand(queryString, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
                 MessageBox.Show("Consumer Deleted !");
-                this.ListConsForm_Load();
+                ListConsForm_Load(sender, e);
                 dGVConsumer.Update();
                 dGVConsumer.Refresh();
                 connection.Close();
             }
+
         }
     }
 }
